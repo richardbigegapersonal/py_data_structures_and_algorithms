@@ -63,10 +63,7 @@ class LinkedList:
       self.head=new_node
     self.length+=1
     return True
-    def pop_first(self):
-      """
-      This method returns the first none of the linkedList
-      """
+  def pop_first(self):
     if self.length==0:
       return None
     else:
@@ -78,5 +75,14 @@ class LinkedList:
         self.head=None
         self.tail=None
       return temp
+  def get(self,index):
+    temp=self.head
+    if(index<0 or index>self.length):
+      return None
+    else:
+      for _ in range(index):
+        temp=temp.next
+    return temp
+
 
       
